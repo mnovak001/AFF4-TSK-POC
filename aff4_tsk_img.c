@@ -7,13 +7,6 @@
 
 #include "aff4/aff4-c.h"
 
-/* =========================================================
-   AFF4-C API MAPPING LAYER
-   =========================================================
-   You MUST map these 4 functions to your aff4-c.h API.
-   Everything else in this file is correct and final.
-*/
-
 #ifndef AFF4_TSK_AFF4_MAPPING_SET
 
 #include "aff4/aff4-c.h"
@@ -66,11 +59,6 @@ static void aff4_close_handle(AFF4H h)
 }
 
 #endif /* AFF4_TSK_AFF4_MAPPING_SET */
-
-
-/* =========================================================
-   TSK BACKEND IMPLEMENTATION
-   ========================================================= */
 
 typedef struct {
     TSK_IMG_INFO img;      /* MUST be first */
