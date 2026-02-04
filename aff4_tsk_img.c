@@ -121,13 +121,6 @@ static ssize_t aff4_tsk_read(
         to_read,
         &got);
 
-if (off == 0 && got >= 512) {
-    fprintf(stderr, "First 16 bytes:\n");
-    for (int i = 0; i < 16; i++)
-        fprintf(stderr, "%02x ", (unsigned char)buf[i]);
-    fprintf(stderr, "\n");
-}
-
     pthread_mutex_unlock(&self->m);
 
     if (rc != 0) {

@@ -32,13 +32,13 @@ int main(int argc, char** argv) {
         TSK_FS_INFO* fs0 = tsk_fs_open_img(img, 0, TSK_FS_TYPE_DETECT);
         if (!fs0) {
             print_tsk_err("tsk_fs_open_img at offset 0 failed");
-            aff4_tsk_img_close(img);
+            tsk_img_close(img);
             return 1;
         }
 
         printf("Opened filesystem at offset 0 successfully!\n");
         tsk_fs_close(fs0);
-        aff4_tsk_img_close(img);
+        tsk_img_close(img);
         return 0;
     }
 
@@ -81,11 +81,11 @@ int main(int argc, char** argv) {
     if (!opened_any) {
         print_tsk_err("No filesystem opened from any allocated partition");
         tsk_vs_close(vs);
-        aff4_tsk_img_close(img);
+        tsk_img_close(img);
         return 1;
     }
 
     tsk_vs_close(vs);
-    aff4_tsk_img_close(img);
+    tsk_img_close(img);
     return 0;
 }

@@ -13,7 +13,6 @@ link_directories(/usr/local/lib)
 # --------------------
 add_library(aff4tsk SHARED
   aff4_tsk_img.c
-  aff4_c_api.c
 )
 
 target_link_libraries(aff4tsk
